@@ -1,29 +1,29 @@
 {
-  "index_patterns" : [
-    {
-      "es": {
-        "default_index": "/%3Cfilebeat-%7Bnow%2Fd-2d%7D%3E%2C%3Cfilebeat-%7Bnow%2Fd-1d%7D%3E%2C%3Cfilebeat-%7Bnow%2Fd%7D%3E/_search",
-        "allow_url_parameter": false
-      },
-      "tail_interval_in_seconds": 10,
-      "es_index_time_offset_in_seconds": 0,
-      "display_timezone": "local",
-      "display_timestamp_format": "MMM DD HH:mm:ss",
-      "max_buckets": 500,
-      "nested_objects" : false,
-      "default_time_range_in_days" : 1,
-      "max_hosts": 100,
-      "max_events_to_keep_in_viewer": 5000,
-      "fields" : {
-        "mapping" : {
-          "timestamp" : "@timestamp",
-          "display_timestamp" : "@timestamp",
-          "hostname" : "host",
-          "program": "input_type",
-          "message": "message"
-        },
-        "message_format": "{{message}}"
-      }
-    }
-  ]
+    "index_patterns": [
+        {
+            "es": {
+                "default_index": "/%3Cfilebeat-%7Bnow%2Fd-2d%7D%3E%2C%3Cfilebeat-%7Bnow%2Fd-1d%7D%3E%2C%3Cfilebeat-%7Bnow%2Fd%7D%3E/_search",
+                "allow_url_parameter": false
+            },
+            "tail_interval_in_seconds": 10,
+            "es_index_time_offset_in_seconds": 0,
+            "display_timezone": "local",
+            "display_timestamp_format": "MMM DD HH:mm:ss",
+            "max_buckets": 500,
+            "nested_objects": false,
+            "default_time_range_in_days": 1,
+            "max_hosts": 100,
+            "max_events_to_keep_in_viewer": 5000,
+            "fields": {
+                "mapping": {
+                    "timestamp": "@timestamp",
+                    "display_timestamp": "@timestamp",
+                    "hostname": "host",
+                    "program": "input_type",
+                    "message": "message"
+                },
+                "message_format": "{{message}}"
+            }
+        }
+    ]
 }
